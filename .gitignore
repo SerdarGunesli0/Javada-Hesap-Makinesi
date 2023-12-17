@@ -1,24 +1,56 @@
-# Compiled class file
-*.class
+import java.util.Scanner;
 
-# Log file
-*.log
+public class Main {
+    public static void main(String[] args) {
+        // İlk Önce Yapılabilecek İşlemleri Yazdıralım
+        System.out.println("(1) Toplama ");
+        System.out.println("(2) Çıkarma ");
+        System.out.println("(3) Çarpma ");
+        System.out.println("(4) Bölme ");
+        System.out.print("Lütfen Yapmak İstediğiniz İşlemi Seçiniz : ");
+//      Kullanıcıya Hangi İşlemi Yapmak İstediğini Soralım 
+        Scanner input = new Scanner(System.in);
+        int scanner1 = input.nextInt();
+        // Kullanıcı Eğer 1 Olarak Giriş Yaparsa Toplama İşlemi Açılacak Ve Kişiden 2 Tane Değer İsteyerek Bunları Toplayacak
 
-# BlueJ files
-*.ctxt
+        if (scanner1 == 1) {
+            Scanner input2 = new Scanner (System.in);
+            System.out.print("Lütfen Toplama İşlemi İçin Birinci Rakamı Girin : ");
+            int sayi1 = input2.nextInt();
+            System.out.print("Lütfen Toplama İşlemi İçin İkinci Rakamı Girin : ");
+            int sayi2 = input2.nextInt();
+            double sonuc1 = (sayi1+sayi2);
+            System.out.println(sayi1+" İle "+sayi2 + " Toplama İşlemi Sonucu  = " + sonuc1);
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+        }if (scanner1 == 2) {
+            System.out.print("Çıkarma İşlemi İçin Lütfen Birinci Rakamı Girin :");
+            double sayi3 = input.nextInt();
+            System.out.print("Çıkarma İşlemi İçin Lütfen İkinci Rakamı Girin ");
+            double sayi4 = input.nextInt();
+            double sonuc2 = (sayi3-sayi4);
+            System.out.println(sayi3+"-"+sayi4+ "Çıkarma İşlemi Sonucu = " + sonuc2);
+         }
+        if (scanner1 == 3 ) {
+            System.out.print("Lütfen Çarpma İşlemi İçin Birinci Rakamı Giriniz :");
+            double sayi5 = input.nextInt();
+            System.out.print("Lütfen Çarpma İşlemi İçin İkinci Rakamı Giriniz : ");
+            double sayi6 = input.nextInt();
+            double sonuc3 = (sayi5*sayi6);
+            System.out.println(sayi5+" İle " + sayi6 +" Çarpma İşleminin Sonucu = " + sonuc3);
+        }
+        if (scanner1 == 4) {
+            System.out.print("Bölme İşlemi İçin Birinci Rakamı Giriniz : ");
+            double sayi7 = input.nextInt();
+            System.out.print("Bölme İşlemi İçin İkinci Rakamı Giriniz : ");
+            double sayi8 = input.nextInt();
+            double sonuc3 = (sayi7/sayi8);
+            System.out.println(sayi7 + " İle " + sayi8 + " Rakamlarının Bölme İşlemi Sonucu = " + sonuc3);
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+        }
+
+
+
+
+    }
+}
